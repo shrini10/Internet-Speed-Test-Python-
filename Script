@@ -1,0 +1,13 @@
+import speedtest
+
+def check_speed():
+    st = speedtest.Speedtest()
+    print("⏳ Testing download speed...")
+    download_speed = st.download() / 1_000_000  # Convert to Mbps
+    print(f"📥 Download Speed: {download_speed:.2f} Mbps")
+
+    print("⏳ Testing upload speed...")
+    upload_speed = st.upload() / 1_000_000  # Convert to Mbps
+    print(f"📤 Upload Speed: {upload_speed:.2f} Mbps")
+
+check_speed()
